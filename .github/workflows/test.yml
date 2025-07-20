@@ -1,0 +1,19 @@
+name: Test Workflow
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Old Key
+        run: echo "This is the old key: old_key"
+
+      - name: Check Secure File
+        run: |
+          if [ -f src/main/resources/properties/securedev-files ]; then
+            echo "Secure file exists and will be logged by the pipeline."
+          else
+            echo "No secure file found."
