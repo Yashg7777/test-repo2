@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Old Key
-        run: echo "This is the old key: old_key"
+        run: echo "This is the old key: NEW_KEY"
 
       - name: Check Secure File
         run: |
