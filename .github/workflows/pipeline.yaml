@@ -1,4 +1,0 @@
-name: pipeline
-
-on:
-  workflow_dispatch:
