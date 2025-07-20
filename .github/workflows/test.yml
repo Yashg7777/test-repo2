@@ -1,15 +1,15 @@
 name: Test Workflow
 
-on:
-  push:
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Print Old Key
-        run: echo "This is the old key: NEW_KEY"
+        run: |
+          echo "This is the old key: NEW_KEY"
+
 
       - name: Check Secure File
         run: |
